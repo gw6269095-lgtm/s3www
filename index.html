@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Professional static website — clean, fast, and ready to deploy." />
+  <title>Home — Professional Website</title>
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="logo">ProSite</a>
+      <nav aria-label="Main">
+        <button class="menu-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">
+          ☰
+        </button>
+        <ul class="nav-list">
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="hero">
+      <div class="container">
+        <h1>Build something solid</h1>
+        <p>
+          A minimal, professional site built with HTML, CSS, and JavaScript.
+          No frameworks, no build step — just clean code and fast load.
+        </p>
+        <div class="hero-actions">
+          <a href="services.html" class="btn btn-primary">View services</a>
+          <a href="contact.html" class="btn btn-secondary">Get in touch</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="text-center">Why this stack</h2>
+        <div class="card-grid">
+          <article class="card">
+            <h3>Fast</h3>
+            <p>Static HTML and CSS load instantly. No runtime, no hydration — just bytes over the wire.</p>
+          </article>
+          <article class="card">
+            <h3>Simple</h3>
+            <p>Easy to read, edit, and version. Works with any host: GitHub Pages, Netlify, or your own server.</p>
+          </article>
+          <article class="card">
+            <h3>Reliable</h3>
+            <p>No dependencies to break. Works in every browser and stays maintainable over time.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> ProSite. Built with HTML, CSS &amp; JS.</p>
+      <p><a href="contact.html">Contact</a> · <a href="about.html">About</a></p>
+    </div>
+  </footer>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

